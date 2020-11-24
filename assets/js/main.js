@@ -19,8 +19,10 @@ btnSend.addEventListener('click', () => {
     }
 });
 
-function showMessges(how, data)
+function showMessages(how, data)
 {
+    data = JSON.parse(data);
+    
     let div = document.createElement('div');
     div.setAttribute('class', how);
 
@@ -36,5 +38,13 @@ function showMessges(how, data)
     h5.textContent = data.name;
 
     let p = document.createElement('p');
-    ph5.textContent = data.msg;
+    p.textContent = data.msg;
+
+    div_txt.appendChild(h5);
+    div_txt.appendChild(p);
+
+    div.appendChild(img);
+    div.appendChild(div_txt);
+
+    content.appendChild(div);
 }

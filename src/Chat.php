@@ -21,13 +21,13 @@ class Chat implements MessageComponentInterface
         echo "New connection! ({$conn->resourceId})\n";
     }
 
-    public function onMessage(ConnectionInterface $from, $msg)
+    /**
+     * @param ConnectionInterface $from
+     * @param string $msg
+     */
+    public function onMessage(ConnectionInterface $from, $msg) : void
     {
-        $numRecv = count($this->clients) - 1;
-
-        echo sprintf('Connection %d sending message "%s" to %d other connection%s' . "\n", 
-        $from->resourceId, $msg, $numRecv, $numRecv == 1 ? '' : 's');
-
+    
         foreach ($this->clients as $client) {
             if ($from !== $client) {
                 // The sender is not the receiver, send to each client connected
