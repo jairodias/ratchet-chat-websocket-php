@@ -40,13 +40,13 @@ class ComposerStaticInitc3df75bdcf953a863619895b60bfc466
         array (
             'Psr\\Http\\Message\\' => 17,
         ),
-        'M' => 
-        array (
-            'MyApp\\' => 6,
-        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
+        ),
+        'A' => 
+        array (
+            'Application\\' => 12,
         ),
     );
 
@@ -107,13 +107,13 @@ class ComposerStaticInitc3df75bdcf953a863619895b60bfc466
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
-        'MyApp\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/Chat',
-        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'Application\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

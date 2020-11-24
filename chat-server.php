@@ -1,10 +1,11 @@
 <?php
+
     use Ratchet\Server\IoServer;
     use Ratchet\Http\HttpServer;
     use Ratchet\WebSocket\WsServer;
-    use Rafa\Socket\Chat;
+    use Application\Chat;
 
-    require 'vendor/autoload.php';
+    require './vendor/autoload.php';
 
         $server = IoServer::factory(
             new HttpServer(
